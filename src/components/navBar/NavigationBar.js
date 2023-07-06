@@ -1,62 +1,83 @@
 import React from "react";
 import { Link } from "gatsby";
+import { styled } from "styled-components";
+
+const Wrapper = styled.div`
+  background-color: #ffffff;
+  height: 2%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  .link {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500
+  }
+
+`
 
 
 
 const NavigationBar = () => {
   return (
-    <div style={{ backgroundColor: '#ffffff', height: '2%', padding: 10, display: 'flex', justifyContent: 'space-between', paddingTop: 16, paddingBottom: 16 }}>
+    <Wrapper style={{ }}>
       <Link
         to="/"
-        style={{ textDecoration: "none", fontSize: 18, fontWeight: 500 }}
+        className="link"
       >
         About us
       </Link>
       <Link
-        to="/"
-        style={{ textDecoration: "none", fontSize: 18, fontWeight: 500 }}
+        to="/vision-mission"
+        className="link"
       >
-        Vision & mission
+        Vision&mission
       </Link>
       <Link
+        to="/companies-visited"
+        className="link"
+      >
+        Companies visited
+      </Link>
+      {/* <Link
         to="/"
-        style={{ textDecoration: "none", fontSize: 18, fontWeight: 500 }}
+        className="link"
       >
         HOD's Message
-      </Link>
+      </Link> */}
       <Link
-        to="/"
-        style={{ textDecoration: "none", fontSize: 18, fontWeight: 500 }}
+        to="/in-progress"
+        className="link"
       >
         Administration
       </Link>
       <Link
-        to="/"
-        style={{ textDecoration: "none", fontSize: 18, fontWeight: 500 }}
+        to="/in-progress"
+        className="link"
       >
         Academics
       </Link>
       <Link
-        to="/"
-        style={{ textDecoration: "none", fontSize: 18, fontWeight: 500 }}
+        to="/in-progress"
+        className="link"
       >
         Facilities
       </Link>
       <Link
-        to="/"
-        style={{ textDecoration: "none", marginRight: 8, fontSize: 18, fontWeight: 500 }}
+        to="/in-progress"
+        className="link"
       >
         Library
       </Link>
       <Link
-        to="/"
-        style={{ textDecoration: "none", marginRight: 8, fontSize: 18, fontWeight: 500 }}
+        to="/in-progress"
+        className="link"
       >
         Student's Corner
       </Link>
-
-
-    </div>
+    </Wrapper>
   )
 }
 export default NavigationBar;
